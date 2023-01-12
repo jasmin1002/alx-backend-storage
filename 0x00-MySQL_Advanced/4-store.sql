@@ -8,8 +8,8 @@ ON orders FOR EACH ROW
 BEGIN
     -- DECLARE quantityPurcharsed INT;
     UPDATE items
-    SET quantity = quantity - NEW.number;
-    -- WHERE orders.item_name = items.name;
+    SET quantity = quantity - NEW.number
+    WHERE NEW.item_name = items.name;
 END //
 
 DELIMITER ;
