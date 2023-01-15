@@ -8,7 +8,7 @@ CREATE PROCEDURE AddBonus (
 BEGIN
     SET @test := -1;
     SELECT id INTO @test FROM projects WHERE name = project_name;
-    select @test;
+    -- select @test;
 
     IF @test > 0 THEN
         UPDATE corrections SET score = score
